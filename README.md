@@ -1,1 +1,56 @@
-# D1
+ما هي Standard Numeric Format Strings؟
+هي طرق جاهزة لتنسيق الأرقام بطريقة معينة عند طباعتها أو عرضها، زي:
+
+عرض رقم كعملة (جنيه، دولار)
+
+عرض رقم كنسبة مئوية
+
+عرض رقم بعدد معين من الأرقام العشرية
+
+عرض رقم بصيغة علمية (exponential)
+امثله:
+"c" العمله بتاعه الجهاز
+"D6" تضيف اصفار العدد يبقي 6 خانات
+"x" الالوان
+"F2" رقم عشري بعد الفاصله
+"p" بيضرب الرقم في 100 وبيضيف %
+"N" رقم بفواصل 
+1) output equation = $30.00
+جمع x + y وحولهم لعمله $ 
+= 30.00$
+2) what is its benefit : 
+الفايدة العامة من تنسيقات الأرقام (Standard Numeric Format Strings)
+هي إنك تقدر تتحكم في شكل وطريقة عرض الأرقام، عشان تكون:
+
+مفهومة أكتر للمستخدم
+
+منظمة
+
+مناسبة للسياق (فلوس، نسبة، تاريخ… إلخ)
+3)anthor specifier output 
+
+        int X = 45;
+        int Y = 130;
+        int result = X + Y;
+
+        Console.WriteLine($"X = {X}, Y = {Y}");
+        Console.WriteLine();
+
+        Console.WriteLine($"1) عادي: {X} + {Y} = {result}");
+        Console.WriteLine($"2) Currency (C): {X} + {Y} = {result.ToString("C")}");
+        Console.WriteLine($"3) Fixed-point (F2): {X} + {Y} = {result.ToString("F2")}");
+        Console.WriteLine($"4) Number with comma (N): {X} + {Y} = {result.ToString("N")}");
+        Console.WriteLine($"5) Percent (P): {X} + {Y} = {result.ToString("P")}");
+        Console.WriteLine($"6) Exponential (E): {X} + {Y} = {result.ToString("E")}");
+        Console.WriteLine($"7) Decimal padded (D6): {X} + {Y} = {result.ToString("D6")}");
+        Console.WriteLine($"8) Hexadecimal (X): {X} + {Y} = {result.ToString("X")}");
+    }
+output:
+1) عادي: 45 + 130 = 175
+2) Currency (C): 45 + 130 = ج.م.‏ 175.00
+3) Fixed-point (F2): 45 + 130 = 175.00
+4) Number with comma (N): 45 + 130 = 175.00
+5) Percent (P): 45 + 130 = 17,500.00%
+6) Exponential (E): 45 + 130 = 1.750000E+002
+7) Decimal padded (D6): 45 + 130 = 000175
+8) Hexadecimal (X): 45 + 130 = AF
