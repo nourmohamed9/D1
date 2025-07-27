@@ -22,7 +22,7 @@ Console.WriteLine(student1[^1]);//65
 ///////////////////////////////////////////////
 /* int[] newStudent = new int[5] { 100, 97 };
 newStudent[0] = 0; */
-int priceSmall = 25;
+int priceSmall = 25;  //task
 int largePrice = 35;
 Double tax = 0.06;
 string valid = "Estimate are valid for 30 Days";
